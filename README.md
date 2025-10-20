@@ -22,7 +22,7 @@ Spring Boot application for managing car rentals.
    cd carrental
 2. Run the application:
    ./mvnw spring-boot:run
-   # or, if you use local Maven
+   or, if you use local Maven
    mvn spring-boot:run
 3. After startup, you can access:
    Swagger UI → http://localhost:8080/swagger-ui/index.html
@@ -33,7 +33,7 @@ Spring Boot application for managing car rentals.
 ## Unit Tests
 Run all unit tests:
 ./mvnw test
-# or
+or
 mvn test
 Unit tests are located in:
 src/test/java/com/michalkrol/carrental/
