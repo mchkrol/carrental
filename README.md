@@ -18,7 +18,7 @@ Spring Boot application for managing car rentals.
 
 ## How to run
 1. Clone the repository:<br>
-   ```git clone https://github.com/michalkrol/carrental.git```<br>
+   ```git clone https://github.com/mchkrol/carrental.git```<br>
    ```cd carrental```
 2. Run the application:<br>
    ```bash ./mvnw spring-boot:run```<br>
