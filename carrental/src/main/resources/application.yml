@@ -1,0 +1,9 @@
+cars:
+  data:
+    - name: Sedan
+    - name: SUV
+    - name: Van
+customers:
+  data:
+    - name: Michał
+    - name: Paweł
