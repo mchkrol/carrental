@@ -20,20 +20,21 @@ Spring Boot application for managing car rentals.
 1. Clone the repository:
    git clone https://github.com/michalkrol/carrental.git
    cd carrental
-2. Run the application:
-   ./mvnw spring-boot:run
-   or, if you use local Maven
-   mvn spring-boot:run
-3. After startup, you can access:
-   Swagger UI → http://localhost:8080/swagger-ui/index.html
-   OpenAPI JSON → http://localhost:8080/v3/api-docs
-   H2 Console → http://localhost:8080/h2-console
-   (JDBC URL: jdbc:h2:mem:testdb, User: sa, Password: empty)
+2. Run the application:<br>
+   Bash:
+   ```./mvnw spring-boot:run```<br>
+   or, if you use local Maven<br>
+   ```mvn spring-boot:run```<br>
+   or using run configurations in IDE
+4. After startup, you can access:<br>
+   Swagger UI → http://localhost:8080/swagger-ui/index.html<br>
+   OpenAPI JSON → http://localhost:8080/v3/api-docs<br>
+   H2 Console → http://localhost:8080/h2-console<br>
 
 ## Unit Tests
-Run all unit tests:
-./mvnw test
-or
-mvn test
-Unit tests are located in:
-src/test/java/com/michalkrol/carrental/
+Run all unit tests:<br>
+```./mvnw test```<br>
+or<br>
+```mvn test```<br>
+Unit tests are located in:<br>
+```src/test/java/com/michalkrol/carrental/```
