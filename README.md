@@ -16,6 +16,11 @@ Spring Boot application for managing car rentals.
 - H2 Database
 - Swagger (SpringDoc OpenAPI)
 
+## Description
+- The application allows to rent a car for a specific customer, on a specific date, at a specific time, for a specific number of days. 
+- There are three types of cars: SUV, van and sedan.
+- The maximum number of cars of each kind is specified in the src/main/resources/application.properties file. 
+
 ## How to run
 1. Clone the repository:<br>
    ```git clone https://github.com/mchkrol/carrental.git```<br>
