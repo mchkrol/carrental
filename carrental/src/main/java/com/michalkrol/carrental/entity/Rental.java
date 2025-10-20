@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 public class Rental {
@@ -17,7 +18,7 @@ public class Rental {
     private CarType carType;
     private Long customerId;
 
-    private LocalDate rentalDate;
+    private LocalDateTime rentalDate;
     private Integer rentalDaysNumber;
 
     public Rental() {
@@ -43,7 +44,7 @@ public class Rental {
         return customerId;
     }
 
-    public LocalDate getRentalDate() {
+    public LocalDateTime getRentalDate() {
         return rentalDate;
     }
 
@@ -59,7 +60,7 @@ public class Rental {
         private Long id;
         private CarType carType;
         private Long customerId;
-        private LocalDate rentalDate;
+        private LocalDateTime rentalDate;
         private Integer rentalDaysNumber;
 
         public Builder id(Long id) {
@@ -77,7 +78,7 @@ public class Rental {
             return this;
         }
 
-        public Builder rentalDate(LocalDate rentalDate) {
+        public Builder rentalDate(LocalDateTime rentalDate) {
             this.rentalDate = rentalDate;
             return this;
         }
