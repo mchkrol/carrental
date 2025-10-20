@@ -1,11 +1,12 @@
 package com.michalkrol.carrental.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -13,12 +14,23 @@ public class Rental {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(hidden = true)
     private Long id;
 
     private CarType carType;
     private Long customerId;
 
+    @Schema(
+            description = "Car rental date and time",
+            example = "2025-10-20T18:00"
+    )
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm")
     private LocalDateTime rentalDate;
+
+    @Schema(
+            description = "Car rental time in days",
+            example = "3"
+    )
     private Integer rentalDaysNumber;
 
     public Rental() {
