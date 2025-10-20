@@ -3,7 +3,7 @@
 Spring Boot application for managing car rentals.
 
 ## Features
-- CRUD operations for Cars, Rentals, and Customers
+- CRUD operations for Rentals, and Customers
 - Validation for overlapping rentals
 - H2 in-memory database
 - Swagger UI documentation
