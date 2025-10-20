@@ -64,14 +64,14 @@ public class RentalValidator {
     private List<Rental> findOverlappingRentals(Rental rental) {
         return rentalRepository.findByCarType(rental.getCarType()).stream()
                 .filter(rentalFromBase -> overlap(rental, rentalFromBase))
-                .collect(Collectors.toList());
+                .toList();
     }
 
     private boolean overlap(Rental rentalToCompare, Rental rentalFromBase) {
-        LocalDateTime rentalToCompareStart = rentalToCompare.getRentalDate().atStartOfDay();
-        LocalDateTime rentalToCompareEnd = rentalToCompare.getRentalDate().plusDays(rentalToCompare.getRentalDaysNumber()).atStartOfDay();
-        LocalDateTime rentalFromBaseStart = rentalFromBase.getRentalDate().atStartOfDay();
-        LocalDateTime rentalFromBaseEnd = rentalFromBase.getRentalDate().plusDays(rentalFromBase.getRentalDaysNumber()).atStartOfDay();
+        LocalDateTime rentalToCompareStart = rentalToCompare.getRentalDate();
+        LocalDateTime rentalToCompareEnd = rentalToCompare.getRentalDate().plusDays(rentalToCompare.getRentalDaysNumber());
+        LocalDateTime rentalFromBaseStart = rentalFromBase.getRentalDate();
+        LocalDateTime rentalFromBaseEnd = rentalFromBase.getRentalDate().plusDays(rentalFromBase.getRentalDaysNumber());
         return (rentalToCompareStart.isBefore(rentalFromBaseEnd) && rentalToCompareEnd.isAfter(rentalFromBaseStart));
     }
 }
