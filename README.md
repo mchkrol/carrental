@@ -17,9 +17,9 @@ Spring Boot application for managing car rentals.
 - Swagger (SpringDoc OpenAPI)
 
 ## How to run
-1. Clone the repository:
-   git clone https://github.com/michalkrol/carrental.git<br>
-   cd carrental
+1. Clone the repository:<br>
+   ```git clone https://github.com/michalkrol/carrental.git```<br>
+   ```cd carrental```
 2. Run the application:<br>
    ```bash ./mvnw spring-boot:run```<br>
    or, if you use local Maven<br>
